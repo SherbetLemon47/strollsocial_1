@@ -8,13 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'StrollSocial',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF080808),
-          brightness: Brightness.light,
-        ),
-        useMaterial3: true,
-      ),
+      debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
   }

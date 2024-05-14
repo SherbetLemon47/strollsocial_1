@@ -7,7 +7,7 @@ class BottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0x000f1115),
+      color: const Color.fromARGB(255, 15, 17, 21),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

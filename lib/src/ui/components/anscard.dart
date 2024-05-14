@@ -14,7 +14,7 @@ class _AnsCardState extends State<AnsCard> {
   Widget build(BuildContext context) {
     String opt = String.fromCharCode(widget.index + 65);
     return Card(
-      color: Theme.of(context).canvasColor,
+      color: const Color.fromARGB(255, 35, 42, 46),
       child: InkWell(
         onTap: () => (),
         child: Row(
@@ -22,27 +22,36 @@ class _AnsCardState extends State<AnsCard> {
           // mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Container(
                 width: 20.0,
                 height: 20.0,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                      // width: 2.0,
-                      ),
+                    // width: 2.0,
+                    color: const Color.fromARGB(255, 196, 196, 196),
+                  ),
                 ),
-                child: Center(child: Text(opt)),
+                child: Center(
+                    child: Text(
+                  opt,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontFamily: 'ProximaNova',
+                    color: Color.fromARGB(255, 196, 196, 196),
+                  ),
+                )),
               ),
             ),
             Expanded(
               child: Text(
                 widget.value,
                 overflow: TextOverflow.clip,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14,
                   fontFamily: 'ProximaNova',
-                  color: Theme.of(context).colorScheme.onSecondaryContainer,
+                  color: Color.fromARGB(255, 196, 196, 196),
                 ),
               ),
             ),

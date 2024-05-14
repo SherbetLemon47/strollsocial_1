@@ -12,19 +12,22 @@ class AnswerOptions extends StatelessWidget {
       "Wind-down time after dinners",
       "The serenity past midnight"
     ];
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        childAspectRatio: 2.5,
+    return SizedBox(
+      height: 160,
+      child: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 2.6,
+        ),
+        itemCount: 4,
+        itemBuilder: (context, index) {
+          String value = answerList[index];
+          return AnsCard(
+            value: value,
+            index: index,
+          );
+        },
       ),
-      itemCount: 4,
-      itemBuilder: (context, index) {
-        String value = answerList[index];
-        return AnsCard(
-          value: value,
-          index: index,
-        );
-      },
     );
   }
 }
